@@ -1,0 +1,5 @@
+Location_Name,Sensor_Type,Air_Sensor_ID,Coordinates,Recent_Air_Timestamp
+Toronto_Downtown,Monitor,7570,"(43.64399, -79.38859)",2023-12-10_03:00
+Massie,Sensor,1191546,"(44.45424702043515, -80.89603037601445)",2023-12-11_03:23
+Harbour Terrace-1,Sensor,221512,"(43.63881659862974, -79.39156109746042)",2023-12-11_03:22
+Wellington Place (elev: 90m),Sensor,1092284,"(43.64482224743071, -79.39476761576265)",2023-12-11_03:22
