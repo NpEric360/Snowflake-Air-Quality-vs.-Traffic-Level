@@ -39,15 +39,15 @@ Location Information
 
 ## Quick tips:
 1. Make sure to create an S3 bucket event using the snowpipe's notification channel:
-   Notification channel can be found by querying: 'describe pipe <pipe name>;'
-###S3 Bucket configuration
+   Notification channel can be found by querying: 'describe pipe <pipe name>;
+S3 Bucket configuration
    S3 bucket/properties/Event notifications
    Settings:
    A. Event Types: 'All object create events'
    B. Filters: ---
    C. Destination Type: SQS Queue
    D. Destination: <notification channel>
-2. Make sure that your snowpipe region and AWS S3 region are the same. You can configure this in your IAM policy
-3. Snowpipe upload troubleshooting can be done by viewing your snowpipe target table and viewing the copy history. Common issues that I ran into are incorrect timestamp formatting and incorrect column datatype parameters.
+3. Make sure that your snowpipe region and AWS S3 region are the same. You can configure this in your IAM policy
+4. Snowpipe upload troubleshooting can be done by viewing your snowpipe target table and viewing the copy history. Common issues that I ran into are incorrect timestamp formatting and incorrect column datatype parameters.
 
    
