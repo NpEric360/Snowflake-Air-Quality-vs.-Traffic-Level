@@ -39,7 +39,7 @@ Location Information
 
 ## Quick tips:
 1. Make sure to create an S3 bucket event using the snowpipe's notification channel:
-   Notification channel can be found by querying: 'describe pipe <pipe name>;__
+   Notification channel can be found by querying: 'describe pipe <pipe name>;  
 S3 Bucket configuration
    S3 bucket/properties/Event notifications
    Settings:
