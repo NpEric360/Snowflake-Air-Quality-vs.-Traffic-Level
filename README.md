@@ -35,4 +35,19 @@ Location Information
 2. In the /real-time directory, there are airsensor_api.py and traffic_api.py. These two files contain functions that call the api's and perform the necessary transformations to extract and format the desired parameters. If the api responses are unique and are not duplicates of previous measurements, they are uploaded to the target s3 bucket.
 3. /real-time/API_scheduler.py creates or opens the location table which contains the location, sensor_id, coordinates, and most recent measurement timestamp of the locations that are being surveyed. This script also calls the api functions from the other two files every half-hour, and automates the pipeline when combined with the auto-ingesting snowpipes.
 
+## Part 3: Tableau Data Visualization
+
+## Quick tips:
+1. Make sure to create an S3 bucket event using the snowpipe's notification channel:
+   Notification channel can be found by querying: 'describe pipe <pipe name>;'
+   ###S3 Bucket configuration
+   S3 bucket/properties/Event notifications
+   Settings:
+   A. Event Types: 'All object create events'
+   B. Filters: ---
+   C. Destination Type: SQS Queue
+   D. Destination: <notification channel>
+2. Make sure that your snowpipe region and AWS S3 region are the same. You can configure this in your IAM policy
+3. Snowpipe upload troubleshooting can be done by viewing your snowpipe target table and viewing the copy history. Common issues that I ran into are incorrect timestamp formatting and incorrect column datatype parameters.
+
    
